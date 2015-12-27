@@ -21,6 +21,8 @@ import org.apache.spark.sql.AnalysisException
 import org.apache.spark.sql.catalyst.expressions._
 import org.apache.spark.sql.types._
 
+@ExpressionDescription(
+  usage = "_FUNC_(column) - Aggregate function: returns the first value in a group.")
 /**
  * Returns the first value of `child` for a group of rows. If the first value of `child`
  * is `null`, it returns `null` (respecting nulls). Even if [[First]] is used on a already
